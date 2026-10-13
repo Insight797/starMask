@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "starmask"
+version = "0.4.1"
+description = "银河摄影缩星工具：从 RAW/图像中分离星点与银河地景"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "StarMask" }]
+keywords = ["astrophotography", "star-removal", "milky-way", "raw", "nef", "arw"]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "rawpy>=0.19",
+    "tifffile>=2023.7.10",
+    "imageio>=2.31",
+    "click>=8.1",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "Pillow>=10.0"]
+
+[project.scripts]
+starmask = "starmask.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,19 @@
+StarMask 银河缩星 0.4.1 — 快速上手
+================================
+
+【系统要求】Mac（Apple Silicon）· macOS 12+
+
+【怎么打开】
+1. 拖 StarMask.app 到「应用程序」
+2. 若提示无法验证开发者：右键打开，或
+   xattr -cr /Applications/StarMask.app
+
+【怎么用】
+添加 RAW（NEF/ARW/…）→ 预览 → 开始缩星
+输出 *_reduced / *_starless / *_stars（TIF 或 DNG）
+默认引擎 starnet（StarNet2，已内置，无需再装）
+
+【说明】
+- 仅 Apple Silicon
+- 大图 StarNet2 约 30–90 秒/张
+- DNG 便于 Lightroom AI 降噪
